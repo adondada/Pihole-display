@@ -67,7 +67,8 @@ To make the screen start automatically on boot, create a system service.
  sudo nano /etc/systemd/system/pihole-display.service
 ```
 
-### 2. Paste the following configuration: (User=root is set so it has permission to read the database, but for me it works without it too)
+### 2. Paste the following configuration: 
+(User=root is set so it has permission to read the database, but for me it works without it too)
 
 ```
 [Unit]
