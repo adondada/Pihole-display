@@ -1,6 +1,6 @@
-# Pi-hole Status Display (Waveshare 2.13" V4 e-Paper)
+# Pi-hole Status Display (Waveshare 2.13" V4 Plus e-Paper)
 
-A lightweight Python script to display Pi-hole statistics and system information on a Raspberry Pi Zero 2 W using the **Waveshare 2.13inch V4 e-Paper HAT**.
+A lightweight Python script to display Pi-hole statistics and system information on a Raspberry Pi Zero 2 W using the **Waveshare 2.13inch V4 Plus e-Paper HAT**.
 
 The display is designed to be **Auth-Free** (no API keys required) by reading the Pi-hole FTL database directly locally. It is optimized for longevity with inverted layouts and efficient refreshing.
 
@@ -100,6 +100,8 @@ sudo systemctl start pihole-display.service
 "DB Read Error": Ensure the service is running as root (Admin), as the Pi-hole database is locked to standard users.
 
 "IOError": Check your HAT connection. Ensure SPI is enabled in raspi-config.
+
+
 
 
 Yes haters, I used AI to fix bugs and comment :)
