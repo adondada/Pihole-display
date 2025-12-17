@@ -1,0 +1,14 @@
+[Unit]
+Description=Pi-hole e-Paper Display
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/home/pi/pihole-display
+ExecStart=/usr/bin/python3 /home/pi/pihole-display/main.py  #use ur own username if its not pi
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
