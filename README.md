@@ -79,7 +79,7 @@ After=network.target
 User=root
 Group=root
 WorkingDirectory=/home/pi/pihole-display
-ExecStart=/usr/bin/python3 /home/pi/pihole-display/main.py
+ExecStart=/usr/bin/python3 /home/pi/pihole-display/main.py #change pi to ur home username
 Restart=always
 RestartSec=30
 
@@ -89,7 +89,8 @@ WantedBy=multi-user.target
 
 ### 3. Enable it and start
 
-```sudo systemctl daemon-reload
+```
+sudo systemctl daemon-reload
 sudo systemctl enable pihole-display.service
 sudo systemctl start pihole-display.service
 ```
