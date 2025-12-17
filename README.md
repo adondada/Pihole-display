@@ -100,3 +100,6 @@ sudo systemctl start pihole-display.service
 "DB Read Error": Ensure the service is running as root (Admin), as the Pi-hole database is locked to standard users.
 
 "IOError": Check your HAT connection. Ensure SPI is enabled in raspi-config.
+
+
+Yes haters, I used AI to fix bugs and comment :)
