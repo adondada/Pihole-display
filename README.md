@@ -59,7 +59,7 @@ Edit the USER_NAME variable at the top of the script to your liking.
 To make the screen start automatically on boot, create a system service.
 
 ### 1. Create the service file:
-```sudo nano /etc/systemd/system/pihole-display.service
+``` sudo nano /etc/systemd/system/pihole-display.service
 ```
 
 ### 2. Paste the following configuration: (User=root is set so it has permission to read the database, but for me it works without it too)
