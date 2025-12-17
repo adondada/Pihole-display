@@ -21,21 +21,24 @@ The display is designed to be **Auth-Free** (no API keys required) by reading th
 
 ### 1. Enable SPI
 Enable the SPI interface on your Raspberry Pi:
-```sudo raspi-config
+```
+sudo raspi-config
 # Interface Options -> SPI -> Yes
 sudo reboot
 ```
 
 ### 2. Install Dependencies
 Install the required system and Python libraries:
-```sudo apt-get update
+```
+sudo apt-get update
 sudo apt-get install python3-pip python3-pil python3-numpy python3-psutil git -y
 sudo pip3 install RPi.GPIO spidev
 ```
 
 ### 3. Install Waveshare Drivers
 Clone the official Waveshare repo and copy the specific V4 library to your project folder:
-```mkdir ~/pihole-display
+```
+mkdir ~/pihole-display
 cd ~/pihole-display
 
 
@@ -49,7 +52,8 @@ rm -rf e-Paper
 
 ### 4. Install the Script
 Copy main.py into the folder.
-```nano main.py
+```
+nano main.py
 # Paste the content of main.py here
 ```
 Edit the USER_NAME variable at the top of the script to your liking.
@@ -59,12 +63,14 @@ Edit the USER_NAME variable at the top of the script to your liking.
 To make the screen start automatically on boot, create a system service.
 
 ### 1. Create the service file:
-``` sudo nano /etc/systemd/system/pihole-display.service
+```
+ sudo nano /etc/systemd/system/pihole-display.service
 ```
 
 ### 2. Paste the following configuration: (User=root is set so it has permission to read the database, but for me it works without it too)
 
-```[Unit]
+```
+[Unit]
 Description=Pi-hole e-Paper Display
 After=network.target
 
